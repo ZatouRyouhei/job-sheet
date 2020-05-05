@@ -21,6 +21,11 @@ export default {
   margin-top: 30px;
 }
 
+body {
+  width: 1850px;
+  height: 900px;
+}
+
 .v-enter-active {
   transition: opacity 1.0s;
 }

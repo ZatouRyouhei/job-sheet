@@ -5,7 +5,7 @@
       <el-row type="flex" align="bottom">
         <el-col :span="8">
           <el-form-item prop="targetYear" label="年度">
-            <el-input-number v-model="form.targetYear" :precision="0" :step="1" :min="2019"></el-input-number>
+            <el-input-number v-model="form.targetYear" :precision="0" :step="1" :min="2019" style="width: 200px;"></el-input-number>
           </el-form-item>
         </el-col>
         <el-col :span="8">

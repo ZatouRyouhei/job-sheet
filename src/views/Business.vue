@@ -3,11 +3,11 @@
     <h3>業務テーブル</h3>
     <el-form ref="form" :model="form" :rules="rules">
       <el-form-item prop="id">
-        <el-input-number v-model="form.id" :precision="0" :step="1" :min="1" :disabled="editFlg">
+        <el-input-number v-model="form.id" :precision="0" :step="1" :min="1" :disabled="editFlg" style="width: 200px;">
         </el-input-number>
       </el-form-item>
       <el-form-item prop="name">
-        <el-input type="text" v-model="form.name" placeholder="業務名"></el-input>
+        <el-input type="text" v-model="form.name" placeholder="業務名" style="width: 100%;"></el-input>
       </el-form-item>
 
       <el-row>

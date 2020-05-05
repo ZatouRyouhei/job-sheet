@@ -2,21 +2,21 @@
   <div class="admin">
     <el-row>
       <el-col :span="18">
-        <el-menu mode="horizontal">
+        <el-menu mode="horizontal" router="true">
           <el-submenu index="1">
             <template v-slot:title>テーブル管理</template>
-            <el-menu-item index="1-1">
-              <router-link to="/admin/table/user">ユーザテーブル</router-link>
+            <el-menu-item index="/admin/table/user">
+              ユーザテーブル
             </el-menu-item>
-            <el-menu-item index="1-2">
-              <router-link to="/admin/table/business">業務テーブル</router-link>
+            <el-menu-item index="/admin/table/business">
+              業務テーブル
             </el-menu-item>
-            <el-menu-item index="1-3">
-              <router-link to="/admin/table/system">システムテーブル</router-link>
+            <el-menu-item index="/admin/table/system">
+              システムテーブル
             </el-menu-item>
           </el-submenu>
-          <el-menu-item index="2">
-            <router-link to="/admin/stats">集計</router-link>
+          <el-menu-item index="/admin/stats">
+            集計
           </el-menu-item>
         </el-menu>
       </el-col>

@@ -3,14 +3,14 @@
     <h3>システムテーブル</h3>
     <el-form ref="form" :model="form" :rules="rules">
       <el-form-item prop="id">
-        <el-input-number v-model="form.id" :precision="0" :step="1" :min="1" :disabled="editFlg">
+        <el-input-number v-model="form.id" :precision="0" :step="1" :min="1" :disabled="editFlg" style="width: 200px;">
         </el-input-number>
       </el-form-item>
       <el-form-item prop="name">
-        <el-input type="text" v-model="form.name" placeholder="システム名"></el-input>
+        <el-input type="text" v-model="form.name" placeholder="システム名" style="width: 100%;"></el-input>
       </el-form-item>
       <el-form-item prop="businessId">
-        <el-select v-model="form.businessId" clearable placeholder="業務">
+        <el-select v-model="form.businessId" clearable placeholder="業務" style="width: 100%;">
           <el-option
               v-for="item in businessList"
               :key="item.value"

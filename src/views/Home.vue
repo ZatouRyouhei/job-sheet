@@ -3,10 +3,10 @@
     <div class="home">
       <el-form ref="form" :model="form" :rules="rules">
         <el-form-item prop="userid">
-          <el-input type="text" size="large" v-model="form.userid" placeholder="ID"></el-input>
+          <el-input type="text" size="large" v-model="form.userid" placeholder="ID" style="width: 100%;"></el-input>
         </el-form-item>
         <el-form-item prop="password">
-          <el-input type="password" size="large" v-model="form.password" show-password placeholder="パスワード"></el-input>
+          <el-input type="password" size="large" v-model="form.password" show-password placeholder="パスワード" style="width: 100%;"></el-input>
         </el-form-item>
         <el-form-item>
           <el-button type="primary" v-on:click="login" icon="el-icon-switch-button">ログイン</el-button>

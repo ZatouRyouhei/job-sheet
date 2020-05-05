@@ -3,13 +3,13 @@
     <h3>ユーザテーブル</h3>
     <el-form ref="form" :model="form" :rules="rules">
       <el-form-item prop="id">
-        <el-input type="text" v-model="form.id" :disabled="editFlg" placeholder="ID"></el-input>
+        <el-input type="text" v-model="form.id" :disabled="editFlg" placeholder="ID" style="width: 100%;"></el-input>
       </el-form-item>
       <el-form-item prop="password">
-        <el-input type="password" v-model="form.password" show-password :placeholder="passwordPH"></el-input>
+        <el-input type="password" v-model="form.password" show-password :placeholder="passwordPH" style="width: 100%;"></el-input>
       </el-form-item>
       <el-form-item prop="name">
-        <el-input type="text" v-model="form.name" placeholder="氏名"></el-input>
+        <el-input type="text" v-model="form.name" placeholder="氏名" style="width: 100%;"></el-input>
       </el-form-item>
 
       <el-row>

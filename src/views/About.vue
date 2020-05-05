@@ -99,7 +99,7 @@
           <el-row type="flex" align="bottom">
             <el-col :span="6">
               <el-form-item prop="searchLimitDate" label="完了期限">
-                <el-date-picker v-model="searchForm.searchLimitDate" type="date" size="mini" format="yyyy年M月d日">
+                <el-date-picker v-model="searchForm.searchLimitDate" type="date" size="mini" format="yyyy年M月d日" style="width:200px;">
                 </el-date-picker>
               </el-form-item>
             </el-col>
@@ -146,20 +146,28 @@
           </el-table-column>
           <el-table-column
             prop="id"
-            label="番号">
+            label="番号"
+            width="120">
           </el-table-column>
           <el-table-column
             prop="title"
-            label="タイトル">
+            label="タイトル"
+            width="270">
           </el-table-column>
           <el-table-column
             prop="occurDate"
             v-bind:formatter="formatDate"
-            label="発生日">
+            label="発生日"
+            width="130">
           </el-table-column>
           <el-table-column
             prop="client.name"
-            label="顧客">
+            label="顧客"
+            width="180">
+          </el-table-column>
+          <el-table-column
+            prop="contact.name"
+            label="窓口">
           </el-table-column>
         </el-table>
       </el-col>
@@ -250,7 +258,7 @@
               </el-col>
               <el-col :span="6">
                 <el-form-item prop="occurDate" label="発生日">
-                  <el-date-picker v-model="form.occurDate" type="date" size="mini" format="yyyy年M月d日">
+                  <el-date-picker v-model="form.occurDate" type="date" size="mini" format="yyyy年M月d日" style="width:200px;">
                   </el-date-picker>
                 </el-form-item>
               </el-col>
@@ -263,16 +271,17 @@
                       step: '00:30',
                       end: '23:30'
                     }"
-                    size="mini">
+                    size="mini"
+                    style="width:200px;">
                   </el-time-select>
                 </el-form-item>
               </el-col>
             </el-row>
             <el-form-item prop="title" label="タイトル">
-              <el-input type="text" size="mini" v-model="form.title"></el-input>
+              <el-input type="text" size="mini" v-model="form.title" style="width:870px;"></el-input>
             </el-form-item>
             <el-form-item prop="content" label="詳細">
-              <el-input type="textarea" :rows="4" v-model="form.content"></el-input>
+              <el-input type="textarea" :rows="4" v-model="form.content" style="width:870px;"></el-input>
             </el-form-item>
 
             <el-row>
@@ -302,13 +311,13 @@
               </el-col>
               <el-col :span="6">
                 <el-form-item prop="limitDate" label="完了期限">
-                  <el-date-picker size="mini" v-model="form.limitDate" type="date" format="yyyy年M月d日">
+                  <el-date-picker size="mini" v-model="form.limitDate" type="date" format="yyyy年M月d日" style="width:200px;">
                   </el-date-picker>
                 </el-form-item>
               </el-col>
               <el-col :span="6">
                 <el-form-item prop="completeDate" label="完了日">
-                  <el-date-picker size="mini" v-model="form.completeDate" type="date" format="yyyy年M月d日">
+                  <el-date-picker size="mini" v-model="form.completeDate" type="date" format="yyyy年M月d日" style="width:200px;">
                   </el-date-picker>
                 </el-form-item>
               </el-col>
@@ -322,7 +331,8 @@
               </el-col>
               <el-col :span="6">
                 <el-form-item prop="responseTime" label="対応時間（時間）">
-                  <el-input-number v-model="form.responseTime" :precision="1" :step="0.5" :min="0" :max="100"></el-input-number>
+                  <el-input-number v-model="form.responseTime" :precision="1" :step="0.5" :min="0" :max="100" style="width:200px;">
+                  </el-input-number>
                 </el-form-item>
               </el-col>
             </el-row>
@@ -344,7 +354,7 @@
                   </el-upload>
                 </el-form-item>
               </el-col>
-              <el-col :span="12" style="overflow-y:auto; height: 200px;">
+              <el-col :span="12" style="overflow-y:auto; height: 180px;">
                 <transition name="fileTable">
                   <table class="filetable" v-if="fileTableDisplay">
                     <tbody>
@@ -1060,6 +1070,8 @@ ul.fileLink a {
 }
 
 #leftPart, #rightPart {
+  margin: 0;
+  padding: 0;
   height: 70vh;
   padding-left: 20px;
   padding-right: 20px;
@@ -1079,4 +1091,7 @@ ul.fileLink a {
   margin-bottom: 10px;
 }
 
+.el-select, .el-input {
+  width: 200px;
+}
 </style>
