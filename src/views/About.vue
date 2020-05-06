@@ -331,7 +331,7 @@
               </el-col>
               <el-col :span="6">
                 <el-form-item prop="responseTime" label="対応時間（時間）">
-                  <el-input-number v-model="form.responseTime" :precision="1" :step="0.5" :min="0" :max="100" style="width:200px;">
+                  <el-input-number v-model="form.responseTime" :precision="1" :step="0.5" :min="0" :max="200" style="width:200px;">
                   </el-input-number>
                 </el-form-item>
               </el-col>

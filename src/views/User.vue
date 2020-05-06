@@ -195,4 +195,8 @@ export default {
   height: 50vh;
   margin: 30px;
 }
+
+.btnCol {
+  text-align: center;
+}
 </style>

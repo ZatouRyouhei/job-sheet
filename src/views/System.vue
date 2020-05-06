@@ -10,7 +10,7 @@
         <el-input type="text" v-model="form.name" placeholder="システム名" style="width: 100%;"></el-input>
       </el-form-item>
       <el-form-item prop="businessId">
-        <el-select v-model="form.businessId" clearable placeholder="業務" style="width: 100%;">
+        <el-select v-model="form.businessId" clearable placeholder="業務">
           <el-option
               v-for="item in businessList"
               :key="item.value"
@@ -201,5 +201,9 @@ export default {
   width: 60%;
   height: 50vh;
   margin: 30px;
+}
+
+.btnCol {
+  text-align: center;
 }
 </style>
