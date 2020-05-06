@@ -652,9 +652,15 @@ export default {
 
               // アニメーション用に添付ファイルテーブルを再表示にする。
               this.fileTableDisplay = true
+
+              // 再検索処理
+              this.search()
             }).catch(() => {
               // アニメーション用に添付ファイルテーブルを再表示にする。
               this.fileTableDisplay = true
+
+              // 再検索処理
+              this.search()
             })
             
             // 登録後に画面上部にIDを表示する
@@ -680,9 +686,7 @@ export default {
                 this.badgeFlg = true
               }
             }
-            // 再検索処理
-            this.search()
-
+            
             this.$message({
               showClose: true,
               message: '登録が完了しました。',
