@@ -2,7 +2,7 @@
   <div class="admin">
     <el-row>
       <el-col :span="18">
-        <el-menu mode="horizontal" router="true">
+        <el-menu mode="horizontal" :router="isRouter">
           <el-submenu index="1">
             <template v-slot:title>テーブル管理</template>
             <el-menu-item index="/admin/table/user">
@@ -17,6 +17,9 @@
           </el-submenu>
           <el-menu-item index="/admin/stats">
             集計
+          </el-menu-item>
+          <el-menu-item index="/admin/userSeq">
+            順序変更
           </el-menu-item>
         </el-menu>
       </el-col>
@@ -40,6 +43,11 @@
 <script>
 export default {
   name: 'Admin',
+  data: function() {
+    return {
+      isRouter: true
+    }
+  },
   methods: {
     logout: function() {
       this.$store.commit('setUser', {})

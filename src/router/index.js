@@ -49,6 +49,11 @@ Vue.use(VueRouter)
         path: 'stats',
         name: 'Stats',
         component: () => import('../views/Stats.vue')
+      },
+      {
+        path: 'userSeq',
+        name: 'UserSeq',
+        component: () => import('../views/UserSeq.vue')
       }
     ]
   }
