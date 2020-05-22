@@ -676,6 +676,9 @@ export default {
               this.badgeValue = "完了"
               this.badgeType = "success"
             } else {
+              // 完了期限は23:59として比較する。
+              this.form.limitDate.setHours(23)
+              this.form.limitDate.setMinutes(59)
               if (this.form.limitDate < new Date()) {
                 // 期限超過
                 this.badgeFlg = false
