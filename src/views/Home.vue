@@ -3,10 +3,10 @@
     <div class="home">
       <el-form ref="form" :model="form" :rules="rules">
         <el-form-item prop="userid">
-          <el-input type="text" size="large" v-model="form.userid" placeholder="ID" style="width: 100%;"></el-input>
+          <el-input type="text" size="large" v-model="form.userid" placeholder="ID" style="width:100%;"></el-input>
         </el-form-item>
         <el-form-item prop="password">
-          <el-input type="password" size="large" v-model="form.password" show-password placeholder="パスワード" style="width: 100%;"></el-input>
+          <el-input type="password" size="large" v-model="form.password" show-password placeholder="パスワード" style="width:100%;"></el-input>
         </el-form-item>
         <el-form-item>
           <el-button type="primary" v-on:click="login" icon="el-icon-switch-button">ログイン</el-button>
@@ -77,26 +77,21 @@ export default {
 
 <style>
 .container {
-  width: 100vh;
-  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
   margin: 0;
   padding: 0;
-  background-image: url('../assets/logo.png');
-  background-position: right 50% top 20%;
-	background-repeat: no-repeat;
-	background-size: 40% auto;
+  height: 100vh;
+  width: 100vw;
+  background: url('../assets/logo.png') 20% 20% no-repeat;
+  background-size: 400px 400px;
 }
 .home {
-  position: absolute;          /* 位置指定 */
-  padding: 20px;               /* 余白指定 */
-  top:  0;                     /* 位置指定 */
-  bottom:  0;                  /* 位置指定 */
-  left:  0;                    /* 位置指定 */
-  right:  0;                   /* 位置指定 */
-  margin:  auto;               /* 中央寄せ */
-  width:  30%;               /* 幅指定 */
-  height: 50%;                /* 高さ指定 */
-  
+  position: absolute;
+  width: 20%;
+  top: 30%;
+  left: 38%;
 }
 
 </style>
