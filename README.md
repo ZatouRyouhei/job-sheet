@@ -9,8 +9,9 @@
 ```
 const URL_BASE = 'http://localhost:8081/jobsheet/webresources/'
 ```
+セットアップのためにはあらかじめ[Node.js](https://nodejs.org/ja/)をインストールしておいてください。  
 
-## Project setup
+## セットアップ
 ```
 npm install
 ```
@@ -32,3 +33,11 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## リリース方法
+```
+npm run build
+```
+実行後にjob-sheet/distが生成されます。  
+C:\inetpub\wwwrootに、job-sheetフォルダを作成し、  
+distフォルダの中身をコピーアンドペーストしてください。
