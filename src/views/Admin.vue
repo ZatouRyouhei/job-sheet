@@ -18,6 +18,9 @@
           <el-menu-item index="/admin/stats">
             集計
           </el-menu-item>
+          <el-menu-item index="/admin/chart">
+            グラフ
+          </el-menu-item>
           <el-menu-item index="/admin/userSeq">
             順序変更
           </el-menu-item>
