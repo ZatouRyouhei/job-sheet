@@ -24,6 +24,6 @@ export default new Vuex.Store({
   },
   plugins: [createPersistedState({
     key: 'job-sheet',
-    storege: sessionStorage
+    storage: sessionStorage
   })]
 })
