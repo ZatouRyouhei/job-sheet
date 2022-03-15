@@ -51,9 +51,16 @@ export default {
     login: function() {
       this.$refs['form'].validate((valid) => {
         if (valid) {
+          const userObj = {
+            id: this.form.userid,
+            password: this.form.password,
+            name: '',
+            seqNo: 0
+          }
           // ユーザ情報取得
-          axios.get(Constant.URL_USER_LOGIN + this.form.userid).then((res) => {
-            if (this.form.password == res.data.password) {
+          axios.post(Constant.URL_USER_LOGIN, userObj).then((res) => {
+            if (res.data) {
+              // ログイン成功
               // ユーザ情報をストアに保存
               this.$store.commit('setUser', {
                 id: res.data.id,
@@ -61,20 +68,44 @@ export default {
               // トップ画面に遷移する。
               this.$router.push('/about')
             } else {
-              // パスワードを間違えていた場合
+              // ログイン失敗
               this.$message({
                 showClose: true,
                 message: 'ログインできませんでした。',
                 type: 'error'
               });
             }
-          }).catch ((error) => { // eslint-disable-line
+          }).catch(() => {
             this.$message({
                 showClose: true,
                 message: 'ログインできませんでした。',
                 type: 'error'
               });
           })
+
+          // axios.get(Constant.URL_USER_LOGIN + this.form.userid).then((res) => {
+          //   if (this.form.password == res.data.password) {
+          //     // ユーザ情報をストアに保存
+          //     this.$store.commit('setUser', {
+          //       id: res.data.id,
+          //       name: res.data.name})
+          //     // トップ画面に遷移する。
+          //     this.$router.push('/about')
+          //   } else {
+          //     // パスワードを間違えていた場合
+          //     this.$message({
+          //       showClose: true,
+          //       message: 'ログインできませんでした。',
+          //       type: 'error'
+          //     });
+          //   }
+          // }).catch ((error) => { // eslint-disable-line
+          //   this.$message({
+          //       showClose: true,
+          //       message: 'ログインできませんでした。',
+          //       type: 'error'
+          //     });
+          // })
         }
       })
     }
